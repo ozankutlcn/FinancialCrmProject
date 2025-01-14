@@ -14,3 +14,7 @@ C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\bin\Debug\EntityFramework.
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\Financia.1DE9CF8F.Up2Date
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmBilling.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmDashboard.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmSpendings.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.Register.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmLogin.resources

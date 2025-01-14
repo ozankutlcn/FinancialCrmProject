@@ -117,6 +117,16 @@ namespace FinancialCrm
 
         }
 
-        
+        private void button8_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmDashboard frmDashboard = new FrmDashboard();
+            frmDashboard.Show();
+        }
     }
 }
