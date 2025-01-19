@@ -3,11 +3,11 @@ Bu proje, C# kullanılarak geliştirilmiş, çok sayfalı bir Windows Forms uygu
 
 ## 🔑 Öne Çıkan Özellikler  
 ## 🖥️ Teknolojiler ve Araçlar  
-C# ile çok sayfalı bir form uygulaması 
-> ● Entity Framework kullanımı ve DB First yaklaşımı 
-> ● Timer ile sürekli değişen verilerin label'lara dinamik şekilde yazdırılması 
-> ● Draw Kütüphanesi ile zengin görsel öğeler 
-> ● Dark Mode destekli basit bir Ayarlar Sayfası 🌙 
+C# ile çok sayfalı bir form uygulaması <br/>
+ ● Entity Framework kullanımı ve DB First yaklaşımı  <br/>
+ ● Timer ile sürekli değişen verilerin label'lara dinamik şekilde yazdırılması  <br/>
+ ● Draw Kütüphanesi ile zengin görsel öğeler  <br/>
+ ● Dark Mode destekli basit bir Ayarlar Sayfası 🌙  <br/>
 ## 📊 Dashboard ve Grafikler  
  ● Column Chart: Banka hesaplarının ve bakiyelerin durumu 
  ● Pie Chart: Ödenen ve ödenmesi gereken faturalar 
