@@ -1,13 +1,13 @@
 ### 🚀 Financial CRM Projem  
-Bu proje, C# kullanılarak geliştirilmiş, çok sayfalı bir Windows Forms uygulamasıdır. Kullanıcı dostu bir arayüz ve güçlü işlevsellik sunarak, finansal işlemleri takip etmeyi kolaylaştırır.</ br> </ br>
+Bu proje, C# kullanılarak geliştirilmiş, çok sayfalı bir Windows Forms uygulamasıdır. Kullanıcı dostu bir arayüz ve güçlü işlevsellik sunarak, finansal işlemleri takip etmeyi kolaylaştırır.
 
 ## 🔑 Öne Çıkan Özellikler  
 ## 🖥️ Teknolojiler ve Araçlar  
 C# ile çok sayfalı bir form uygulaması 
- ● Entity Framework kullanımı ve DB First yaklaşımı 
- ● Timer ile sürekli değişen verilerin label'lara dinamik şekilde yazdırılması 
- ● Draw Kütüphanesi ile zengin görsel öğeler 
- ● Dark Mode destekli basit bir Ayarlar Sayfası 🌙 
+> ● Entity Framework kullanımı ve DB First yaklaşımı 
+> ● Timer ile sürekli değişen verilerin label'lara dinamik şekilde yazdırılması 
+> ● Draw Kütüphanesi ile zengin görsel öğeler 
+> ● Dark Mode destekli basit bir Ayarlar Sayfası 🌙 
 ## 📊 Dashboard ve Grafikler  
  ● Column Chart: Banka hesaplarının ve bakiyelerin durumu 
  ● Pie Chart: Ödenen ve ödenmesi gereken faturalar 
