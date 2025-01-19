@@ -35,6 +35,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDashboard));
             this.lblBillAmount = new System.Windows.Forms.Label();
             this.lblBillTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -46,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -59,20 +61,19 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblBillAmount
@@ -193,6 +194,16 @@
             this.panel2.TabIndex = 7;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.Dashboard_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(119)))), ((int)(((byte)(138)))));
@@ -219,6 +230,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Ayarlar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -368,15 +380,6 @@
             this.panel6.Size = new System.Drawing.Size(379, 39);
             this.panel6.TabIndex = 13;
             // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(575, 181);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(379, 39);
-            this.panel7.TabIndex = 14;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -389,6 +392,15 @@
             this.label3.Text = "Bankalar Ve Banka Hesaplarındaki Para Miktarlarına\r\nAşağıdaki Grafikten Ulaşabili" +
     "rsiniz";
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Location = new System.Drawing.Point(575, 181);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(379, 39);
+            this.panel7.TabIndex = 14;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -400,16 +412,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = " Ödenen Ve Ödenmesi Gereken Fatura Tutarlarına \r\nAşağıdaki Grafikten Ulaşabilirsi" +
     "niz\r\n";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.Dashboard_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // FrmDashboard
             // 
@@ -426,6 +428,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard Form";
@@ -439,6 +442,7 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
@@ -446,7 +450,6 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

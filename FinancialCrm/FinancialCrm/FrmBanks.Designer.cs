@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBanks));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -108,6 +109,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Ayarlar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // btnDashboard
             // 
@@ -135,6 +137,7 @@
             this.btnBankProcess.TabIndex = 4;
             this.btnBankProcess.Text = "Banka Hareketleri";
             this.btnBankProcess.UseVisualStyleBackColor = false;
+            this.btnBankProcess.Click += new System.EventHandler(this.btnBankProcess_Click);
             // 
             // btnSpendings
             // 
@@ -190,6 +193,7 @@
             this.btnCategories.TabIndex = 0;
             this.btnCategories.Text = "Kategoriler";
             this.btnCategories.UseVisualStyleBackColor = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // panel2
             // 
@@ -219,9 +223,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(42, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 22);
+            this.label1.Size = new System.Drawing.Size(78, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Banka Formu";
+            this.label1.Text = "Bankalar";
             // 
             // label2
             // 
@@ -409,6 +413,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBanks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmBanks";

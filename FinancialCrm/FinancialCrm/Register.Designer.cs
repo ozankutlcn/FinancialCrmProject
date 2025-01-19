@@ -28,13 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnRegister = new System.Windows.Forms.Button();
             this.btnGiris = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -71,16 +74,16 @@
             this.txtPassword.Size = new System.Drawing.Size(215, 20);
             this.txtPassword.TabIndex = 4;
             // 
-            // button1
+            // btnRegister
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(229, 211);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(84, 31);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Kaydol !";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnRegister.Location = new System.Drawing.Point(229, 211);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(84, 31);
+            this.btnRegister.TabIndex = 6;
+            this.btnRegister.Text = "Kaydol !";
+            this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click_1);
             // 
             // btnGiris
             // 
@@ -97,29 +100,46 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(112, 20);
+            this.label4.Location = new System.Drawing.Point(210, 31);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 39);
+            this.label4.Size = new System.Drawing.Size(113, 39);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Kayıt Ekranı";
+            this.label4.Text = "Kaydol";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.eye_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(394, 159);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 39);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
             // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(412, 322);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(126)))), ((int)(((byte)(214)))), ((int)(((byte)(223)))));
+            this.ClientSize = new System.Drawing.Size(483, 322);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnGiris);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Register";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kayıt Ol";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Register_MouseDown);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,8 +151,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

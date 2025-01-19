@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBilling));
             this.panel1 = new System.Windows.Forms.Panel();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -106,6 +107,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Ayarlar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -133,6 +135,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Banka Hareketleri";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -146,6 +149,7 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Giderler";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -159,6 +163,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Faturalar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnBanksForm
             // 
@@ -186,6 +191,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Kategoriler";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -352,6 +358,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(790, 253);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel4
             // 
@@ -382,9 +389,9 @@
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.Location = new System.Drawing.Point(42, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(113, 22);
+            this.label5.Size = new System.Drawing.Size(81, 22);
             this.label5.TabIndex = 2;
-            this.label5.Text = "Banka Formu";
+            this.label5.Text = "Faturalar";
             // 
             // FrmBilling
             // 
@@ -397,6 +404,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBilling";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ödeme Fatura Formu";

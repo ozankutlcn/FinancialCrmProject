@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSpendings));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.btnCategories = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblBillTitle = new System.Windows.Forms.Label();
             this.lblSpendingTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -53,24 +54,14 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.Dashboard_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // timer1
             // 
@@ -120,6 +111,7 @@
             this.button7.TabIndex = 6;
             this.button7.Text = "Ayarlar";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -147,6 +139,7 @@
             this.btnBankProcess.TabIndex = 4;
             this.btnBankProcess.Text = "Banka Hareketleri";
             this.btnBankProcess.UseVisualStyleBackColor = false;
+            this.btnBankProcess.Click += new System.EventHandler(this.btnBankProcess_Click);
             // 
             // button4
             // 
@@ -201,6 +194,7 @@
             this.btnCategories.TabIndex = 0;
             this.btnCategories.Text = "Kategoriler";
             this.btnCategories.UseVisualStyleBackColor = false;
+            this.btnCategories.Click += new System.EventHandler(this.btnCategories_Click);
             // 
             // label1
             // 
@@ -209,9 +203,9 @@
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(42, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(156, 22);
+            this.label1.Size = new System.Drawing.Size(100, 22);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Harcamalar Formu";
+            this.label1.Text = "Harcamalar";
             // 
             // panel2
             // 
@@ -223,6 +217,16 @@
             this.panel2.Size = new System.Drawing.Size(972, 35);
             this.panel2.TabIndex = 16;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::FinancialCrm.Properties.Resources.Dashboard_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
             // 
             // lblBillTitle
             // 
@@ -347,14 +351,15 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSpendings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmSpendings";
             this.Load += new System.EventHandler(this.FrmSpendings_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);

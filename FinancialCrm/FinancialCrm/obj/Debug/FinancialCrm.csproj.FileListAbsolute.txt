@@ -18,3 +18,6 @@ C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.Frm
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmSpendings.resources
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.Register.resources
 C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmLogin.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmBankProcess.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmSettings.resources
+C:\Users\ozan_\source\repos\FinancialCrm\FinancialCrm\obj\Debug\FinancialCrm.FrmCategories.resources

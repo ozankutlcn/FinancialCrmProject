@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FrmAdminPanel.cs">
+    <Compile Include="FrmBankProcess.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmAdminPanel.Designer.cs">
-      <DependentUpon>FrmAdminPanel.cs</DependentUpon>
+    <Compile Include="FrmBankProcess.Designer.cs">
+      <DependentUpon>FrmBankProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmBanks.cs">
       <SubType>Form</SubType>
@@ -91,6 +91,12 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSettings.Designer.cs">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmSpendings.cs">
       <SubType>Form</SubType>
@@ -142,17 +148,26 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmBankProcess.resx">
+      <DependentUpon>FrmBankProcess.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBanks.resx">
       <DependentUpon>FrmBanks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBilling.resx">
       <DependentUpon>FrmBilling.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategories.resx">
+      <DependentUpon>FrmCategories.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSettings.resx">
+      <DependentUpon>FrmSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSpendings.resx">
       <DependentUpon>FrmSpendings.cs</DependentUpon>
@@ -196,6 +211,7 @@
     <None Include="Images\Fatura_icon.png" />
     <None Include="Images\Bank_icon.png" />
     <None Include="Images\Dashboard_icon.png" />
+    <None Include="Images\eye_icon.png" />
     <Content Include="Models\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Model1.Context.cs</LastGenOutput>

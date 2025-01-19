@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using FinancialCrm.Models;
+using System;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace FinancialCrm
 {
@@ -16,18 +14,25 @@ namespace FinancialCrm
         public FrmLogin()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*'; // TextBox şifre modunda başlasın
         }
+        private bool isPasswordVisible = false;
+
+
+        FinancialCrmEntities db = new FinancialCrmEntities();
+        
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Hide();
             Register register = new Register();
             register.Show();
+            
         }
 
 
         #region FormBorderStyle None İle Sürükleme İşlemi
-      
+
 
         // WinAPI fonksiyonlarını tanımla
         [DllImport("user32.dll")]
@@ -47,5 +52,40 @@ namespace FinancialCrm
             }
         }
         #endregion
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Username == txtUsername.Text && u.Password == txtPassword.Text);
+            if (user != null)
+            {
+                MessageBox.Show("Giriş Başarılı","Başarılı !",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                this.Hide();
+                FrmBilling billing = new FrmBilling();
+                billing.Show();
+            }
+            else
+            {
+                MessageBox.Show("Yanlış Kullanıcı Adı Veya Şifre","Hata !",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                // Nokta şeklinde görünmesi için
+                txtPassword.PasswordChar = '*';
+            }
+            else
+            {
+                // Düz metin olarak göster
+                txtPassword.PasswordChar = '\0'; // Şifre gizlemeyi kaldır
+            }
+
+            // Görünürlük durumunu değiştir
+            isPasswordVisible = !isPasswordVisible;
+        }
+    
     }
 }

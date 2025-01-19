@@ -17,36 +17,16 @@ namespace FinancialCrm
         public Register()
         {
             InitializeComponent();
+            txtPassword.PasswordChar = '*';
         }
+        private bool isPasswordVisible = false;
+
         FinancialCrmEntities db = new FinancialCrmEntities();
-        private void button1_Click(object sender, EventArgs e)
-        {
-            db.Users.Add(new Users {  Username = txtUsername.Text, Password = txtPassword.Text, });
-            MessageBox.Show("User added");
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //if(txtUsername.Text == "admin" && txtPassword.Text == "admin")
-            //{
-            //    this.Hide();
-            //    FrmAdminPanel adminPanel = new FrmAdminPanel();
-            //    adminPanel.Show();
-            //}
-            //else
-            //{
-            //    var user = db.Users.FirstOrDefault(x => x.Username == txtUsername.Text && x.Password == txtPassword.Text);
-            //    if (user != null)
-            //    {
-            //        this.Hide();
-            //        FrmLogin userLogin = new FrmLogin();
-            //        userLogin.Show();
-            //    }
-            //    else
-            //    {
-            //        MessageBox.Show("User not found");
-            //    }
-            //}
+            
             this.Hide();
             FrmLogin login = new FrmLogin();
             login.Show();
@@ -73,5 +53,57 @@ namespace FinancialCrm
             }
         }
         #endregion
+
+
+
+
+
+        private void btnRegister_Click_1(object sender, EventArgs e)
+        {
+            var user = db.Users.FirstOrDefault(u => u.Username == txtUsername.Text);
+            var userNameText = txtUsername.Text;
+            var userPasswordText = txtPassword.Text;
+            if (user != null)
+            {
+                MessageBox.Show("Böyle Bir Kullanıcı Zaten Var!","Hatalı Kullanıcı !",MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Lütfen Boş Alan Bırakmayınız!","Uyarı !", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                db.Users.Add(new Users
+                {
+                    Username = txtUsername.Text,
+                    Password = txtPassword.Text // Şifreyi hashleyerek saklamayı unutmayın!
+                });
+                db.SaveChanges();
+                MessageBox.Show("Kullanıcınız Başarıyla Oluşturulmuştur!","Başarılı !",MessageBoxButtons.OK,MessageBoxIcon.Information);
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (isPasswordVisible)
+            {
+                // Nokta şeklinde görünmesi için
+                txtPassword.PasswordChar = '*';
+            }
+            else
+            {
+                // Düz metin olarak göster
+                txtPassword.PasswordChar = '\0'; // Şifre gizlemeyi kaldır
+            }
+
+            // Görünürlük durumunu değiştir
+            isPasswordVisible = !isPasswordVisible;
+        }
     }
+    
 }

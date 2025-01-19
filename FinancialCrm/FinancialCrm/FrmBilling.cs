@@ -128,5 +128,44 @@ namespace FinancialCrm
             FrmDashboard frmDashboard = new FrmDashboard();
             frmDashboard.Show();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmBankProcess frmBankProcess = new FrmBankProcess();
+            frmBankProcess.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmSpendings frmSpendings = new FrmSpendings();
+            frmSpendings.Show();
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmSettings frmSettings = new FrmSettings();
+            frmSettings.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FrmCategories frmCategories = new FrmCategories();
+            frmCategories.Show();
+        }
     }
 }
