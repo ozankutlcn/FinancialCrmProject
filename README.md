@@ -43,6 +43,9 @@ git clone https://github.com/ozankutlcn/financial-crm.git  <br/>
 3. Gerekli NuGet paketlerini yükleyin (Entity Framework vb.). <br/>
 4. Proje ayarlarından veritabanı bağlantısını yapılandırın.  <br/>
 5. Uygulamayı çalıştırın ve keyfini çıkarın!  <br/> <br/>
-##💡 Geliştirme ve Öneriler  <br/>
+## 💡 Geliştirme ve Öneriler  <br/>
 Bu projeyi daha da geliştirmek için fikirlerinizi paylaşabilirsiniz. Öneriler ve katkılar için teşekkür ederim! 😊 <br/>
 #CSharp #EntityFramework #WindowsForms #FinancialCRM #GitHubProjects
+
+![2025-01-19 14-24-09](https://github.com/user-attachments/assets/ef860bb3-63cf-44ad-b04a-f0b076f708f6)
+
